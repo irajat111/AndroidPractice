@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PracticeAndroid</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="welcome">welcome To My Page !</string>
+    <string name="account">Create Your Account</string>
+    <string name="enter_email">Enter Email</string>
+</resources>
