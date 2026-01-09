@@ -8,6 +8,25 @@
     tools:context=".Login_Page"
     android:orientation="vertical">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_hor_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".20"/>
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/android_heading"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20sp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_hor_25"
@@ -70,8 +89,86 @@
         android:layout_marginHorizontal="20sp"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
         app:layout_constraintStart_toendOf="@+id/etPass"
-        android:layout_marginTop="70sp"
+        android:layout_marginTop="50sp"
         android:backgroundTint="@color/green"
         />
+
+    <TextView
+        android:id="@+id/login_fb_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="or sign up with"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        android:textSize="30sp"
+        android:layout_marginBottom="20sp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_fb_x"
+        app:layout_constraintStart_toStartOf="@+id/login_fb_x"
+        app:layout_constraintEnd_toEndOf="@+id/login_fb_x"
+        >
+
+        <ImageView
+            android:id="@+id/googlelogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/facebook"
+            />
+
+        <ImageView
+            android:id="@+id/fblogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/google"
+            />
+
+        <ImageView
+            android:id="@+id/twitterlogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/twitter"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/dont_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll_logo"
+        app:layout_constraintStart_toStartOf="@+id/ll_logo"
+        app:layout_constraintEnd_toEndOf="@+id/ll_logo"
+        android:text="Don't have an account?"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp"
+        android:text="Sign Up"
+        app:layout_constraintTop_toTopOf="@id/ll_logo"
+        app:layout_constraintEnd_toStartOf="@id/ll_logo"
+        app:layout_constraintEnd_toEndOf="@id/ll_logo"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

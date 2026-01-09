@@ -10,16 +10,28 @@
     android:background="@color/green">
 
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_99"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".99"
+        />
+
     <TextView
         android:id="@+id/androidsplash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Android"
+        android:hint="@string/android_heading"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:foregroundGravity="center"
-        android:textColor="@color/white"
         android:gravity="center"
-       />
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
