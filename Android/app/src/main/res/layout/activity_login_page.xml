@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Page"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_hor_25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25"
+        />
+
+    <TextView
+        android:id="@+id/etLoginName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20sp"
+        android:padding="10sp"
+        android:text="Welcome to Login Page!"
+        android:textColor="@color/green"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent+"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_hor_25"
+        />
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="@string/enter_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
+        android:layout_marginHorizontal="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guide_hor_25"
+        app:layout_constraintEnd_toEndOf="@+id/guide_hor_25"
+        app:layout_constraintTop_toTopOf="@+id/guide_hor_25"
+
+        />
+
+ <EditText
+     android:id="@+id/etPass"
+     android:hint="@string/enter_password"
+     android:layout_marginTop="10sp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginHorizontal="20sp"
+     app:layout_constraintTop_toBottomOf="@+id/etName"
+     app:layout_constraintStart_toStartOf="@+id/etName"
+     app:layout_constraintEnd_toEndOf="@+id/etName"
+     />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="5sp"
+        android:layout_marginHorizontal="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/etPass"
+        app:layout_constraintStart_toendOf="@+id/etPass"
+        android:layout_marginTop="70sp"
+        android:backgroundTint="@color/green"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

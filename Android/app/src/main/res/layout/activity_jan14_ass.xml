@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".jan_14_ass">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_99"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".99"
+
+        app:layout_constraintStart_toStartOf="@+id/guide_99"
+        app:layout_constraintEnd_toEndOf="@+id/guide_99"
+        app:layout_constraintTop_toTopOf="@+id/guide_99"
+        />
+
+    <LinearLayout
+        android:id="@+id/llBasicIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textSize="30sp">
+
+        <TextView
+            android:id="@+id/BasicIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:text="Basic Introduction !"
+            android:textAlignment="center"
+            android:paddingHorizontal="5sp"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:text="Name :"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/etSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp"
+            android:layout_marginHorizontal="15sp"
+            android:text="Rajat Singh"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/etBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:text="Branch :"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/etBranchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15sp"
+            android:layout_marginVertical="10sp"
+            android:text="CSE"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llInter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/etInter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:text="Intership :"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/etCoderRoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15sp"
+            android:layout_marginVertical="10sp"
+            android:text="CoderRoot"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

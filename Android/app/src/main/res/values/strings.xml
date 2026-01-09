@@ -3,5 +3,7 @@
     <string name="enter_name">Enter Your Name</string>
     <string name="welcome">welcome To My Page !</string>
     <string name="account">Create Your Account</string>
-    <string name="enter_email">Enter Email</string>
+    <string name="enter_email">Enter Your Email</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="enter_password">Enter Your Password</string>
 </resources>
