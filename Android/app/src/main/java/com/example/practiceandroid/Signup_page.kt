@@ -2,19 +2,20 @@ package com.example.practiceandroid
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.practiceandroid.databinding.ActivityPracticeLayoutBinding
+import com.example.practiceandroid.databinding.ActivitysignupPageBinding
 
-class PractiveLayout : AppCompatActivity() {
 
-    lateinit var binding: ActivityPracticeLayoutBinding
+class Signup_page : AppCompatActivity() {
+
+
+    // binding declare activity
+
+    lateinit var binding: ActivitysignupPageBinding
 //    lateinit var etName : EditText
 //    lateinit var etEmail : EditText
 //    lateinit var etPass : EditText
@@ -23,7 +24,11 @@ class PractiveLayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityPracticeLayoutBinding.inflate(layoutInflater)
+
+        // initalize activity
+        binding = ActivitysignupPageBinding.inflate(layoutInflater)
+
+        // root for activity
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -35,6 +40,8 @@ class PractiveLayout : AppCompatActivity() {
 //        etPass = findViewById(R.id.etPass)
 //        btnSignUp = findViewById(R.id.btnSignup)
 
+
+        // action performed on signup button and also using intent to navigate sign up to login page
        binding.btnSignup.setOnClickListener{
             if(binding.etName.text.toString().isEmpty()){
                 binding.etName.error = "Enter Name !"
@@ -46,7 +53,7 @@ class PractiveLayout : AppCompatActivity() {
                 binding.etPass.error = "Enter Password !"
             }
             else{
-                val intent = Intent(this, RelativeActivity::class.java)
+                val intent = Intent(this, Login_Page::class.java)
                 startActivity(intent)
                 finish()
                 Toast.makeText(this,"Sign Up Successful",Toast.LENGTH_SHORT).show()

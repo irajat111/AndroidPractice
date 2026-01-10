@@ -20,7 +20,7 @@ class SplashScreen : AppCompatActivity() {
             insets
         }
         Handler(Looper.getMainLooper()).postDelayed({
-            var intent = Intent(this, PractiveLayout::class.java)
+            var intent = Intent(this, Signup_page::class.java)
             startActivity(intent)
         }, 3000)
     }
