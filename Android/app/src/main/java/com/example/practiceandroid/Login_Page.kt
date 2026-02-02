@@ -32,14 +32,25 @@ class Login_Page : AppCompatActivity() {
         // binding.clickbutton/text.setonclicklistner
         binding.textsignup.setOnClickListener {
 
-            // intent = Intent(this,nextpage/moveanotherpage::class.java
-            intent = Intent(this, Signup_page::class.java)
+            // validadtions
+            if (binding.etName.text.toString().isEmpty()){
+                binding.etName.error = "Enter Your Email !"
+            }
+            else {
+                binding.etPass.error = "Enter Your Password !"
 
-            //startactivity - start activity
-            startActivity(intent)
 
-            // finish - activity
-            finish()
+                // intent = Intent(this,nextpage/moveanotherpage::class.java
+                intent = Intent(this, Signup_page::class.java)
+
+                //startactivity - start activity
+                startActivity(intent)
+
+                // finish - activity
+                finish()
+            }
+
         }
+
     }
 }

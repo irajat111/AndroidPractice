@@ -42,20 +42,32 @@ class Signup_page : AppCompatActivity() {
 
 
         // action performed on signup button and also using intent to navigate sign up to login page
-       binding.btnSignup.setOnClickListener{
-            if(binding.etName.text.toString().isEmpty()){
-                binding.etName.error = "Enter Name !"
-            }
-            else if (binding.etEmail.text.toString().isEmpty()){
-                binding.etEmail.error = "Enter Email !"
+
+        // binding.clickbutton/text.setOnClickListener
+        binding.btnSignup.setOnClickListener{
+
+            // validation
+            if(binding.etEmail.text.toString().isEmpty()){
+                binding.etEmail.error = "Enter Your Email !"
             }
             else if (binding.etPass.text.toString().isEmpty()){
                 binding.etPass.error = "Enter Password !"
             }
+            else if (binding.etConfirmEmail.text.toString().isEmpty()){
+                binding.etConfirmEmail.error = "Confirm Password !"
+            }
             else{
+
+                // intent = Intent(this.nextpage/moveanotherpage::class.java
                 val intent = Intent(this, Login_Page::class.java)
+
+                // StartActivity here
                 startActivity(intent)
+
+                // finish activity
                 finish()
+
+                // Toast set here
                 Toast.makeText(this,"Sign Up Successful",Toast.LENGTH_SHORT).show()
             }
         }
